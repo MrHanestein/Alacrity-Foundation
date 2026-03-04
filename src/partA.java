@@ -15,16 +15,20 @@ public class partA {
     public static String checkPrimeNumbers(int numbers) {
         ArrayList<Integer> factorsList = findAllFactors(numbers);
         if(factorsList.size() == 2) {
-            return "This is a prime number";
+            return "Prime!";
         }
         else {
-            return "This is not a prime number:" + factorsList;
+            return "Numbers are not prime, factors list :" + factorsList;
         }
     }
+
+    int min = 10;
+    int max = 20;
+    //Extension Arraylist to calculate all primes in range
     public static void main(String[] args) {
-        findAllFactors(1000);
-        System.out.println(checkPrimeNumbers(1000));
-        checkPrimeNumbers(2000);
+        System.out.println(findAllFactors(13));
+        System.out.println(checkPrimeNumbers(22));
+        System.out.println(checkPrimeNumbers(1));
         System.out.println(checkPrimeNumbers(2000));
 
     }
